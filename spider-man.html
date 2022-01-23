@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel's Spider-Man: Miles Morales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .mb-header,
+        .mb-footer {
+            display: none;
+        }
+
+        /* header */
+        .header {
+            display: block;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            /* flex-direction: column; */
+        }
+
+        .header-top,
+        .header-bot {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+        }
+
+        .header-top .header-ul ul {
+            display: flex;
+            list-style: none;
+            align-items: baseline;
+        }
+
+        .header-top .header-ul ul li {
+            margin-right: 30px;
+            color: #757575;
+            font-size: .8125rem;
+            line-height: 21px;
+            font-weight: 500;
+        }
+
+        .header-top .header-icon {
+            display: flex;
+
+        }
+
+        .header-top .header-icon a {
+            color: #fff;
+            border-radius: 20px;
+            background-color: #1f1f1f;
+            padding: 0 20px;
+            margin-right: 20px;
+        }
+
+        .header-top .header-icon span {
+            color: #757575;
+            margin-right: 10px;
+
+        }
+
+        .header .header-mid a {
+            text-decoration: none;
+            color: #363636;
+            font-size: .9375rem;
+            margin-right: 20px;
+            font-weight: 400;
+        }
+
+        .header .header-mid .a1 {
+            border-bottom: 4px solid #0172ce;
+            color: #0172ce;
+            padding-bottom: 18px;
+        }
+
+        .header .header-bot .header-rihgt a {
+            background-color: #d53b00;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 15px;
+
+        }
+
+        /* footer */
+        .footer {
+            background-color: #00439c;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .footer .footer-left .left-top img {
+            width: 25%;
+        }
+
+        .footer .footer-left .spanfa-rotate-1802 {
+            margin-top: 20px;
+        }
+
+        .footer .footer-left .left-top i {
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .footer .footer-left .left-top span {
+            color: #fff;
+
+        }
+
+        .footer .footer-left-b {
+            margin-top: 80px;
+        }
+
+        .footer .footer-left-b .footer-svg img {
+            width: 30%;
+        }
+
+        .footer .span3 {
+            color: #fff;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .footer .footer-right {
+            display: flex;
+        }
+
+        .footer .footer-right ul {
+            list-style: none;
+            margin-right: 30px;
+        }
+
+        .footer .footer-right ul li {
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+            line-height: 1.5em;
+            font-size: .775rem;
+            font-weight: 500;
+        }
+
+        /* top area */
+        .top-area {
+            background-image: url(img/siepdc/spiderman-miles-morales-background-block-mobile-01-en-12jun20.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .top-area video {
+            width: 100%;
+
+        }
+
+        .top-area .top-area-tittle {
+            position: absolute;
+            top: 50px;
+            left: 150px;
+
+        }
+
+        .top-area .top-area-tittle h1 {
+            font-size: calc(1rem*3.05176);
+            font-weight: 300;
+            line-height: 1.5em;
+            color: #f5f5f5;
+        }
+
+        .top-area .top-area-tittle p {
+            font-weight: 500;
+            font-size: calc(1rem);
+            color: #f5f5f5;
+        }
+
+        .top-area .top-area-tittle .buy-car {
+            margin-bottom: 20px;
+        }
+
+        .top-area .top-area-tittle .buy-car i {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .06);
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        .top-area .top-area-tittle .icon-block,
+        .top-area .top-area-tittle .money,
+        .top-area .top-area-tittle .money2,
+        .top-area .top-area-tittle .log-in {
+            display: flex;
+        }
+
+        .top-area .top-area-tittle .icon-block p,
+        .top-area .top-area-tittle .log-in p {
+            border: 1px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            font-size: .75rem;
+            text-align: center;
+            width: 2.5rem;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .top-area .top-area-tittle .money p {
+            font-weight: 300;
+            font-size: 1.625rem;
+            margin-right: 12px;
+            line-height: 1.25;
+            letter-spacing: 0.1px;
+
+        }
+
+        .top-area .top-area-tittle .money2 p {
+            margin-right: 8px;
+            line-height: 1.5em;
+            font-weight: 700;
+            font-size: .75rem;
+            color: #fff;
+        }
+
+        .top-area .top-area-tittle .log-in a {
+            font-weight: 400;
+            font-size: 16px;
+            color: #f5f5f5;
+            text-decoration: white;
+            margin-right: 10px;
+        }
+
+        .top-area .rating {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            bottom: 200px;
+            right: 100px;
+        }
+
+        .top-area .rating img {
+            width: 30%;
+            margin-right: 15px;
+        }
+
+        .top-area .rating p {
+            font-size: .375rem;
+            color: #f5f5f5;
+            font-weight: 400;
+        }
+
+        .top-area .carsoul ul {
+            display: flex;
+        }
+
+        .top-area img {
+            width: 100%;
+        }
+
+        .owl-prev span {
+            color: #fff;
+            font-size: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .owl-carousel {
+            padding: 0 40px;
+        }
+
+        .owl-next span {
+            color: #fff;
+            font-size: 100px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+
+
+        /* section2 */
+        .section2 {
+            position: relative;
+
+        }
+
+        .section2 img {
+            width: 100%;
+        }
+
+        .section2 .sec2-article {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 100px;
+            padding: 0 150px;
+
+
+        }
+
+        .section2 .section2-tittle {
+            margin-right: 50px;
+        }
+
+        .section2 .section2-tittle p {
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .section2 .sec2-article .section2-tittle h2 {
+            font-size: 35px;
+            line-height: 1.25em;
+            font-weight: 300;
+            color: #f5f5f5;
+            margin-bottom: 30px;
+        }
+
+        .section2 .sec2-article .section2-p p {
+            font-size: calc(1rem);
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #f5f5f5;
+        }
+
+        /* section3 */
+        .section3 {
+            padding-right: 150px;
+            padding-left: 150px;
+            padding-top: 50px;
+        }
+
+        .section3 h2,
+        .section4 h2,
+        .section5 h2,
+        .section6 h2,
+        .section7 h2 {
+            text-align: center;
+        }
+
+        .section3 h2 {
+            margin-bottom: 60px;
+        }
+
+        .section3 img {
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+
+        .section3 .cardd {
+            text-align: center;
+        }
+
+        .section3 .cardd span {
+            color: rgb(54, 54, 54);
+            line-height: 1.5em;
+            font-size: calc(1rem*1.5625);
+            font-weight: 400;
+
+
+        }
+
+        .section3 .cardd p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #1f1f1f;
+            margin-top: 20px;
+
+        }
+
+        /* section4 */
+        .section4 {
+            background-color: #1f1f1f;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        .section4 .section4-tittle {
+            margin-bottom: 30px;
+        }
+
+        .section4 .section4-tittle h2 {
+            color: #fff;
+            font-size: 35px;
+        }
+
+        .section4 .section4-tittle span {
+            text-align: center;
+            display: block;
+            font-weight: 400;
+            line-height: 1.5em;
+            font-size: 18px;
+            color: #ccc
+        }
+
+        .section4 img {
+            width: 100%;
+        }
+
+        .section4 .cardd .card-p p {
+            font-weight: 700;
+            font-size: 12px;
+            color: #f5f5f5;
+            margin-top: 30px;
+        }
+
+        .section4 .section4-bot {
+            margin-top: 50px;
+        }
+
+        .section4 .section4-bot p {
+            color: #f5f5f5;
+        }
+
+        .section4 .section4-bot img {
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* section5 */
+        .section5 {
+            position: relative;
+
+        }
+
+        .section5 img {
+            width: 100%;
+        }
+
+        .section5 .section5-tittle {
+            position: absolute;
+            top: 100px;
+            padding: 0 150px;
+        }
+
+        .section5 .section5-tittle h3 {
+            line-height: 1.25em;
+            font-size: calc(1rem*1.95312);
+            font-weight: 300;
+            color: #f5f5f5;
+            margin-bottom: 10px;
+        }
+
+        .section5 .section5-tittle p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #f5f5f5;
+            margin-bottom: 30px;
+        }
+
+        .section5 .section5-tittle a {
+            background-color: rgba(33, 36, 41, .9);
+            color: #00b0ff;
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 1.25em;
+            border-radius: 2rem;
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        /* section6 */
+        .section6 {
+            background-color: #eee;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .section6 .section6-article {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .section6 .section6-article li {
+            color: #1f1f1f;
+            font-weight: 500;
+            line-height: 1.5rem;
+            font-size: 14px;
+            list-style: square;
+        }
+
+        .section6 .section6-article ul li::marker {
+            color: #00439c
+        }
+
+        /* section7 */
+        .section7 {
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .section7 h2 {
+            margin-bottom: 50px;
+        }
+
+        .section7 img {
+            width: 100%;
+        }
+
+        .section7 .cardd span {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .section7 .cardd .icon {
+            margin: 10px 0px;
+        }
+
+        .section7 .cardd .icon p {
+            border: 1px solid #000;
+            color: #000;
+            font-weight: 400;
+            font-size: .335rem;
+            text-align: center;
+            width: 2.5rem;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .section7 .icon {
+            justify-content: center;
+        }
+
+        .section7 .money1 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .section7 .icon,
+        .section7 .money,
+        .section7 .money2 {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .section7 .buy-car a,
+        .top-area-tittle .buy-car a {
+            background-color: #d53b00;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 5px 100px;
+            border-radius: 20px;
+        }
+
+        .section7 .section7-bot {
+            margin-top: 100px;
+        }
+
+        .section7 .section7-bot p {
+            font-size: .35rem;
+            line-height: 3.5em;
+            font-weight: 400;
+            color: #1f1f1f;
+
+        }
+
+        .section7 .cardd .money .p2 {
+            text-decoration: line-through;
+        }
+
+        .section7 .cardd .li {
+            display: flex;
+
+        }
+
+        .section7 .cardd li {
+            margin-bottom: 20px;
+        }
+
+        .section7 .cardd .li li {
+            text-align: right;
+        }
+
+        .section7 .cardd .li li::marker {
+            color: #00439c;
+
+        }
+
+        .section7 .cardd li::marker {
+            color: #00439c;
+        }
+
+        /* section8 */
+        .section8 {
+            background-color: #eee;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+
+        .section8 .section8-article {
+            justify-content: center;
+        }
+
+        .section8 .section8-article .s8-art {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section8 .section8-article .s8-art img {
+            width: 15%;
+            margin-bottom: 50px;
+        }
+
+        .section8-article .section8-p .left {
+            margin-right: 150px;
+        }
+
+
+        .section8 .section8-top p,
+        .section8-article .section8-p .right p,
+        .section8-article .section8-p .left p {
+            font-size: .55rem;
+            line-height: 2.5em;
+            font-weight: 400;
+            color: #1f1f1f;
+        }
+
+        .section8-article .section8-p .right p {
+            font-size: .115rem;
+            line-height: 9.5em;
+            font-weight: 700;
+        }
+
+        .section8 .section8-p {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section8 .section8-bot {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width:375px) {
+
+            .header,
+            .footer {
+                display: none;
+            }
+
+            /* mb header */
+            .mb-header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .mb-header .mb-header-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+
+            .mb-header-icons {
+                display: flex;
+
+            }
+
+            .mb-header-icons .list {
+                margin-right: 20px;
+            }
+
+            .mb-header .mb-login a {
+                color: #fff;
+                background-color: #1f1f1f;
+                border-radius: 20px;
+                padding: 0 20px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .mb-header .header-bot {
+                margin-top: 20px;
+            }
+
+            .mb-header .header-bot a {
+                color: #757575;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+
+            /* mb footer */
+            .mb-footer {
+                background-color: #00439c;
+                display: block;
+                padding: 50px 20px;
+            }
+
+            .mb-footer .left-top img {
+                width: 30%;
+            }
+
+            .mb-footer .spanfa-rotate-1802 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+
+            .mb-footer .footer-right {
+                margin-top: 20px;
+                margin-left: -30px;
+            }
+
+            .mb-footer .left-top i {
+                color: #fff;
+                margin-right: 10px;
+            }
+
+            .mb-footer .left-top span {
+                color: #fff;
+
+            }
+
+
+            .mb-footer .footer-left-b .footer-svg img {
+                width: 30%;
+            }
+
+            .mb-footer .span3 {
+                color: #fff;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .mb-footer .footer-right {
+                display: block;
+            }
+
+            .mb-footer .footer-right ul {
+                list-style: none;
+                margin-right: 30px;
+            }
+
+            .mb-footer .footer-right ul li {
+                color: #fff;
+                margin-bottom: 10px;
+                cursor: pointer;
+                line-height: 1.5em;
+                font-size: .775rem;
+                font-weight: 500;
+            }
+
+            /* top area */
+            .top-area {
+                background-size: auto;
+            }
+
+            .top-area video {
+                width: 140%;
+            }
+
+            .top-area .top-area-tittle {
+                position: static;
+                transform: translate(20px, -50px);
+            }
+
+            .top-area .rating {
+                bottom: 205px;
+                right: 200px;
+
+
+            }
+
+            .owl-carousel {
+                padding: 0 20px;
+            }
+
+            .top-area .money {
+                justify-content: space-between;
+            }
+
+            .top-area .buy-car i {
+                color: #fff;
+                margin-left: 10px;
+            }
+
+            /* section2 */
+
+            .section2 {
+                display: none;
+            }
+
+
+            /* section3 */
+            .section3 {
+                padding: 0;
+                padding-top: 50px;
+
+            }
+
+            .section3 .row {
+                margin: 0;
+            }
+
+            /* section4 */
+            .section4 {
+                padding: 50px 20px;
+            }
+
+            .section4-tittle h2 {
+                margin-bottom: 20px;
+            }
+
+            .section4-tittle span {
+                font-size: 16px;
+            }
+
+            .section4 .row {
+                margin: 0;
+            }
+
+            /* section5 */
+            .section5 {
+                display: none;
+            }
+
+            /* section6 */
+            .section6 {
+                padding: 0;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-right: 10px;
+            }
+
+            .section6 .section6-article {
+                display: block;
+            }
+
+            .section6 .section6-article ul li {
+                margin-bottom: 20px;
+            }
+
+            /* section7 */
+            .section7 {
+                padding: 0;
+                padding-top: 50px;
+            }
+
+            .section7 .row {
+                margin: 0;
+            }
+
+            .section7 .cardd {
+                text-align: center;
+            }
+
+            .section7 .cardd span {
+                margin-bottom: 20px;
+            }
+
+            .section7 .cardd .icon p {
+                border: 1px solid #000;
+                font-weight: 700;
+                font-size: .75rem;
+                text-align: center;
+                width: 2.5rem;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+            }
+
+            .section7 .cardd img {
+                margin-bottom: 20px;
+            }
+
+            .section7 .cardd li::marker {
+                color: #00439c;
+            }
+
+            .section7 .li {
+                text-align: left;
+                padding-left: 30px;
+            }
+
+            .section7 .icon,
+            .money {
+                justify-content: space-around;
+            }
+
+            .money p {
+                margin-top: 20px;
+                font-size: 20px;
+            }
+
+            .buy-car {
+                margin-bottom: 30px;
+            }
+
+            .section7-bot {
+                padding: 0 20px;
+            }
+
+            /* section8 */
+            .section8 {
+                padding: 50px 20px;
+            }
+
+            .section8 .row {
+                margin: 0;
+
+            }
+
+            .section8 .section8-top {
+                margin-bottom: 50px;
+            }
+
+            .section8 .section8-p {
+                display: block;
+            }
+
+            .section8 .section8-p .right {
+                margin-top: 70px;
+            }
+
+            .section8 .section8-article .section8-p .left {
+                margin: 0;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-ul">
+                <ul>
+                    <li>
+                        <svg class="shared-nav-ps-logo" width="50px" height="50px" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 50 50" data-di-res-id="d87778a3-51f63a1b" data-di-rand="1641376452515">
+                            <g>
+                                <g>
+                                    <path d="M5.8,32.1C4.3,33.1,4.8,35,8,35.9c3.3,1.1,6.9,1.4,10.4,0.8c0.2,0,0.4-0.1,0.5-0.1v-3.4l-3.4,1.1
+                 c-1.3,0.4-2.6,0.5-3.9,0.2c-1-0.3-0.8-0.9,0.4-1.4l6.9-2.4V27l-9.6,3.3C8.1,30.7,6.9,31.3,5.8,32.1z M29,17.1v9.7
+                 c4.1,2,7.3,0,7.3-5.2c0-5.3-1.9-7.7-7.4-9.6C26,11,23,10.1,20,9.5v28.9l7,2.1V16.2c0-1.1,0-1.9,0.8-1.6C28.9,14.9,29,16,29,17.1z
+                  M42,29.8c-2.9-1-6-1.4-9-1.1c-1.6,0.1-3.1,0.5-4.5,1l-0.3,0.1v3.9l6.5-2.4c1.3-0.4,2.6-0.5,3.9-0.2c1,0.3,0.8,0.9-0.4,1.4
+                 l-10,3.7V40L42,34.9c1-0.4,1.9-0.9,2.7-1.7C45.4,32.2,45.1,30.8,42,29.8z" fill="#0070d1"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </li>
+                    <li>遊戲</li>
+                    <li>硬體</li>
+                    <li>服務</li>
+                    <li>最新消息</li>
+                    <li>購物</li>
+                    <li>支援</li>
+                </ul>
+            </div>
+            <div class="header-icon">
+                <a href="#" class="header-a">登入</a>
+                <div class="search">
+                    <span>搜尋</span>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="header-bot">
+            <div class="header-left"></div>
+            <div class="header-mid">
+                <a href="#" class="a1">Marvel’s Spider-Man: Miles Morales</a>
+                <a href="">快訊號角日報</a>
+            </div>
+            <div class="header-rihgt">
+                <a href="#" class="buy">立即購買</a>
+            </div>
+        </div>
+    </header>
+    <!-- mobile header -->
+    <header class="mb-header">
+        <div class="mb-header-top">
+            <div class="mb-header-icons">
+                <div class="list">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="mb-search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="mb-header-logo">
+                <svg class="shared-nav-ps-logo" width="50px" height="50px" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"
+                    data-di-res-id="d87778a3-51f63a1b" data-di-rand="1641376452515">
+                    <g>
+                        <g>
+                            <path d="M5.8,32.1C4.3,33.1,4.8,35,8,35.9c3.3,1.1,6.9,1.4,10.4,0.8c0.2,0,0.4-0.1,0.5-0.1v-3.4l-3.4,1.1
+             c-1.3,0.4-2.6,0.5-3.9,0.2c-1-0.3-0.8-0.9,0.4-1.4l6.9-2.4V27l-9.6,3.3C8.1,30.7,6.9,31.3,5.8,32.1z M29,17.1v9.7
+             c4.1,2,7.3,0,7.3-5.2c0-5.3-1.9-7.7-7.4-9.6C26,11,23,10.1,20,9.5v28.9l7,2.1V16.2c0-1.1,0-1.9,0.8-1.6C28.9,14.9,29,16,29,17.1z
+              M42,29.8c-2.9-1-6-1.4-9-1.1c-1.6,0.1-3.1,0.5-4.5,1l-0.3,0.1v3.9l6.5-2.4c1.3-0.4,2.6-0.5,3.9-0.2c1,0.3,0.8,0.9-0.4,1.4
+             l-10,3.7V40L42,34.9c1-0.4,1.9-0.9,2.7-1.7C45.4,32.2,45.1,30.8,42,29.8z" fill="#0070d1"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="mb-login">
+                <a href="#">登入</a>
+            </div>
+        </div>
+        <div class="header-bot">
+            <a href="#">Marvel’s Spider-Man: Miles Morales</a>
+            <a href="">快訊號角日報</a>
+        </div>
+    </header>
+    <main>
+        <!-- top area -->
+        <section class="top-area">
+            <video
+                src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/games/pdps/s/sp/spiderman-miles-morales/video/spider-man-miles-morales-hero-video-01-15sec-720-web-en-06jul20.mp4"
+                type="video/mp4" autoplay loop muted="muted"></video>
+            <div class="top-area-tittle">
+                <h1>Marvel's Spider-Man: Miles<br> Morales</h1>
+                <p>Sony Interactive Entertainment</p>
+                <div class="icon-block">
+                    <p>PS5</p>
+                    <p>PS4</p>
+                </div>
+                <div class="money">
+                    <p>NT$1490</p>
+                </div>
+                <div class="buy-car">
+                    <a href="#">加入購物籃</a>
+                    <i class="far fa-heart"></i>
+                </div>
+                <p>已發行 2020/11/12</p>
+                <div class="log-in">
+                    <a href="#">也登陸 PS4™ 平台</a>
+                    <p>PS4</p>
+                </div>
+                <p>PS4 遊戲現可升級至 PS5 版本¹</p>
+                <p>已支援遊戲輔助</p>
+            </div>
+            <div class="rating">
+                <img src="img/svg/Rating15 (1).png" alt="">
+                <p>暴力內容, 毒品</p>
+            </div>
+            <div class="carsoul">
+                <ul class="owl-carousel">
+                    <li><img src="img/vi400/maxresdefault (6).jpg" alt=""></li>
+                    <li><img src="img/vi400/maxresdefault (5).jpg" alt=""></li>
+                    <li><img src="img/vi400/maxresdefault (2).jpg" alt="">
+                    </li>
+                    <li><img src="img/vi400/maxresdefault (4).jpg" alt=""></li>
+                    <li><img src="img/vi400/maxresdefault.jpg" alt=""></li>
+                    <li><img src="img/vi400/maxresdefault (3).jpg" alt=""></li>
+                    <li><img src="img/siepdc/spiderman-miles-morales-screenshot-03-disclaimer-en-01oct20 (3).png"
+                            alt=""></li>
+                    <li><img src="img/siepdc/spiderman-miles-morales-screenshot-02-disclaimer-en-01oct20 (1).png"
+                            alt=""></li>
+                    <li><img src="img/siepdc/spiderman-miles-morales-screenshot-04-disclaimer-en-01oct20 (1).png"
+                            alt=""></li>
+                    <li><img src="img/siepdc/spiderman-miles-morales-screenshot-01-disclaimer-en-01oct20 (1).png"
+                            alt=""></li>
+
+                </ul>
+            </div>
+        </section>
+        <!-- section2 -->
+        <section class="section2">
+            <img src="img/siepdc/spiderman-miles-morales-hero-01-ps4-en-12jun20.jpg" alt="">
+            <div class="sec2-article">
+                <div class="section2-tittle">
+                    <p>遊戲概覽</p>
+                    <h2>Be greater. Be yourself.</h2>
+                    <h2>置身英雄新秀麥爾斯·摩拉斯的崛起征途，駕馭驚人的嶄新能力，成為獨當一面的蜘蛛人。</h2>
+                </div>
+                <div class="section2-p">
+                    <p>在《Marvel's Spider-Man》宇宙最新的冒險中，少年麥爾斯·摩拉斯一邊努力適應搬家後的生活，一邊追隨導師彼得·派克的腳步，成為新蜘蛛人。</p>
+                    <p>與此同時，這位英雄新秀的家園卻面臨各大勢力鬥爭的威脅，隨時毀於一旦，讓他領悟到能力越大、責任也越大的道理。為了拯救漫威的紐約市，麥爾斯必須扛下重責大任，成為獨當一面的蜘蛛人。</p>
+                </div>
+            </div>
+        </section>
+        <!-- section3 -->
+        <section class="section3">
+            <h2>遊戲特色</h2>
+
+            <div class="row">
+                <div class="cardd col-lg-4 col-12">
+                    <img src="img/siepdc/spiderman-miles-morales-screenshot-01-disclaimer-en-01oct20 (1).png" alt="">
+                    <span>麥爾斯·摩拉斯的崛起</span>
+                    <p>麥爾斯·摩拉斯發現了自己擁有與導師彼得·派克截然不同的威力。駕馭麥爾斯獨一無二的生物電毒液轟炸攻擊與隱形能力，同時將驚人的蜘蛛網特技、裝置及技能發揮至淋漓盡致。</p>
+                </div>
+                <div class="cardd col-lg-4 col-12">
+                    <img src="img/siepdc/spiderman-miles-morales-screenshot-04-disclaimer-en-01oct20 (1).png" alt="">
+                    <span>能源之戰</span>
+                    <p>邪惡的能源公司與高科技犯罪大軍為了爭奪漫威宇宙紐約的掌控權，掀起一場腥風血雨的戰爭。眼見自己的新家園淪為戰場，麥爾斯必須明白成為英雄應付出的代價，並為成就大局作出犧牲。</p>
+                </div>
+                <div class="cardd col-lg-4 col-12">
+                    <img src="img/siepdc/spiderman-miles-morales-screenshot-03-disclaimer-en-01oct20 (1).png" alt="">
+                    <span>生氣蓬勃的新家園</span>
+                    <p>在熱鬧熙攘又車水馬龍的新社區，隨麥爾斯穿梭於白雪皚皚的街頭，尋找歸屬感。當私生活與英雄工作的界線逐漸模糊，他終於找到自己能信賴的對象，以及家的實感。</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- section4 -->
+        <section class="section4">
+            <div class="section4-tittle">
+                <h2>老家的朋友</h2>
+                <span>《Marvel's Spider-Man: Miles Morales》登場英雄介紹</span>
+            </div>
+            <div class="row section4-article">
+                <div class="cardd col-lg-3">
+                    <img src="img/siepdc/marvels-spider-man-miles-morales-miles-morales-cutout-02-en-14oct20 (1).png"
+                        alt="">
+                    <div class="card-p">
+                        <p>麥爾斯·摩拉斯是漫威宇宙紐約最新登場的蜘蛛人。麥爾斯在父親不幸身亡後，認識了彼得·派克，很快就建立起亦師亦友的關係。麥爾斯因被基因改造的奧氏企業蜘蛛咬傷，獲得獨特能力，並用了好幾個月說服彼得訓練他。
+                        </p>
+                        <p>麥爾斯在東哈林展開人生的新一頁，也肩負起一籮筐的新責任：維繫友誼、應付家人參政，在家庭生活和英雄身分間取得平衡。紐約市的權力爭鬥一觸即發，正值危急存亡之秋。麥爾斯必須成為獨當一面的蜘蛛人，才不會痛失一切。
+                        </p>
+                    </div>
+                </div>
+                <div class="cardd col-lg-3">
+                    <img src="img/siepdc/marvels-spider-man-miles-morales-rio-morales-cutout-02-en-14oct20 (1).png"
+                        alt="">
+                    <div class="card-p">
+                        <p>麥爾斯的母親莉歐·摩拉斯，是紐約市議會選舉的候選人。麥爾斯的父親過世後，母子兩人就搬回了莉歐生長的地方：東哈林。
+                        </p>
+                        <p>莉歐為心愛的社區發聲請命，也總是關心朋友和鄰居。隨著洛桑能源企業開始在東哈林占地盤，廣建設施，莉歐也挺身而出，帶領社區正面迎擊大企業。她奮力抗爭，以期保住生氣蓬勃的家園。
+                        </p>
+                    </div>
+                </div>
+                <div class="cardd col-lg-3">
+                    <img src="img/siepdc/marvels-spider-man-miles-morales-peter-parker-cutout-02-en-14oct20 (1).png"
+                        alt="">
+                    <div class="card-p">
+                        <p>彼得·派克是第一代蜘蛛人，也是麥爾斯·摩拉斯的超級英雄導師。麥爾斯的父親不幸身亡後，彼得安排麥爾斯到慈宴會擔任志工，意外引發一連串事件，麥爾斯也因此獲得堪比彼得的超能力。
+                        </p>
+                        <p>彼得無可奈何，只好答應收麥爾斯為徒，傳授要訣，指導新人操控能力的方法，並盡可能提供人生建議。彼得和MJ到國外出差，為《號角日報》報導錫卡里亞和平會談。他相信在他回國之前，麥爾斯能當個單打獨鬥的蜘蛛人，為城市效力。
+                        </p>
+                    </div>
+                </div>
+                <div class="cardd col-lg-3">
+                    <img src="img/siepdc/marvels-spider-man-miles-morales-ganke-lee-cutout-02-en-14oct20 (1).png"
+                        alt="">
+                    <div class="card-p">
+                        <p>剛克·李是麥爾斯·摩拉斯的死黨，也是能夠信賴的密友。剛克是土生土長的哈林居民，就讀布魯克林遠見學院，在校時致力精進軟體開發技術，成為麥爾斯不可多得的幫手。剛克的「友善的鄰家蜘蛛人」App徹底改變了紐約人與超級英雄的互動方式。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row section4-bot">
+                <div class="cardd col-lg-4">
+                    <img src="img/vi400/maxresdefault (8).jpg" alt="">
+                    <p>莉歐·摩拉斯 與 麥爾斯·摩拉斯努力適應雙重身分</p>
+                </div>
+                <div class="cardd col-lg-4">
+                    <img src="img/vi400/maxresdefault (7).jpg" alt="">
+                    <p>彼得·派克 與 麥爾斯·摩拉斯惺惺相惜</p>
+                </div>
+                <div class="cardd col-lg-4">
+                    <img src="img/vi400/maxresdefault (9).jpg" alt="">
+                    <p>剛克·李 鼓勵 麥爾斯·摩拉斯</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- section5 -->
+        <section class="section5">
+            <img src="img/siepdc/marvels-spider-man-miles-morales-daily-bugle-now-banner-02-en-06nov20.png" alt="">
+            <div class="section5-tittle">
+                <h3>《號角日報》所有新聞</h3>
+                <p>瀏覽漫威宇宙紐約最大型刊物的最新一期內容，深入了解《Marvel's Spider-<br>Man: Miles
+                    Morales》之前發生的事件。《號角日報》改版後脫胎換骨，展現<br>新潮的版面，並對城市、犯罪、蜘蛛人等議題提出新穎的觀點。向您介紹全新<br>的《快訊號角日報》。</p>
+                <a href="#">閱讀最新一期</a>
+            </div>
+        </section>
+        <!-- section6 -->
+        <section class="section6">
+            <h2>PS5™ 特色</h2>
+
+            <div class="section6-article">
+                <ul class="left">
+                    <li>精采絕倫的視覺效果： 透過4K及HDR畫質的《Marvel's Spider-Man: Miles Morales》前進下著雪的漫威宇宙紐約2
+                        。感受光線追蹤技術帶來的大樓倒影，以及強化的光影效果及角色細節。可自行開關60格幀率效能模式，賦予蜘蛛人宇宙栩栩如生的活力。</li>
+                    <li>
+                        飛速讀取：《Marvel's Spider-Man: Miles Morales》運用超高速SSD的迅速載入技術，讓您體驗在漫威宇宙紐約中飛快移動，以及近乎即時的重新載入。
+                    </li>
+                    <li>
+                        自適應扳機：遊玩《Marvel's Spider-Man: Miles Morales》時，DualSense控制器的自適應扳機讓蜘蛛人的蛛網就像在您的指尖劃過。
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>觸覺回饋：DualSense™控制器沉浸式觸覺回饋，讓雙手直接感受麥爾斯·摩拉斯的每發拳頭、蛛網射擊與毒液轟炸攻擊。</li>
+                    <li>Tempest 3D AudioTech（必須配備相容耳機）：在《Marvel's Spider-Man: Miles
+                        Morales》中透過3D空間音效打造栩栩如生的城市聲響，您可以聽見屋頂及街道上的各種活動。PS5主機的Tempest 3D
+                        AudioTech生動呈現城市的聲音，讓您彷彿置身漫威宇宙紐約，並切身感受媲美電影場面的精彩時刻。</li>
+                </ul>
+            </div>
+
+        </section>
+        <!-- section7 -->
+        <section class="section7">
+            <h2>版本</h2>
+            <div class="row">
+                <div class="cardd col-lg-4">
+                    <img src="img/siepdc/HcLcfeQBXd2RiQaCeWQDCIFN.jpg" alt="">
+                    <span>普通版</span>
+                    <div class="icon">
+                        <p>PS4</p>
+                        <p>PS5</p>
+                    </div>
+                    <li>Marvel's Spider-Man: Miles Morales</li>
+                    <div class="money1">
+                        <p>NT$1,490</p>
+                    </div>
+                    <div class="buy-car">
+                        <a href="#">加入購物籃</a>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="cardd col-lg-4">
+                    <img src="img/siepdc/h4b1fckIYD3AhajCPzRsrUMC.jpg" alt="">
+                    <span>Ultimate Edition</span>
+                    <div class="icon">
+                        <p>PS4</p>
+                        <p>PS5</p>
+                    </div>
+                    <div class="li">
+                        <li>Marvel's Spider-Man Remastered</li>
+                        <li>Marvel's Spider-Man: Miles Morales</li>
+                    </div>
+                    <div class="money">
+                        <p>NT$1,990</p>
+                    </div>
+                    <div class="buy-car">
+                        <a href="#">加入購物籃</a>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="row section7-bot">
+                <p>1自 PlayStation™Store 購買本遊戲的 PS5™ 數位版後，即可免費下載 PS4™ 版本，不需額外付費。在 PlayStation™Store 購買本遊戲的 PS4™
+                    數位版，即可在
+                    PS5™ 版本於2020年11月12日推出時免費下載，不需額外付費。若您已經擁有 PS4™ 版本，便不必另行預購 PS5™ 版本。擁有 PS4™ 遊戲光碟的玩家，只需將光碟插入 PS5™
+                    主機即可存取此內容。擁有 PS4™ 版遊戲光碟的玩家，若是購買 PS5™ 數位版主機（無光碟版主機），則無法存取此內容。</p>
+                <p>3《Marvel's Spider-Man: Miles Morales Ultimate Edition》內含獲獎遊戲《Marvel's Spider-Man
+                    Remastered》的兌換代碼，更包括同樣為PS5重製及增強的《Marvel's Spider-Man: The City That Never
+                    Sleeps》，完整收錄冒險共三個DLC章節的精彩內容。需持有存取PlayStation™Network的帳戶並具備網路連線才能兌換代碼。代碼到期日[2024年1月1日]。</p>
+            </div>
+
+        </section>
+        <!-- section8 -->
+        <section class="section8">
+            <div class="section8-top">
+                <p>* 以上資料如有任何修改，恕不另行通知。</p>
+                <p>* 此遊戲/內容可能不會在某些國家或地區或以某些語言提供。</p>
+            </div>
+            <div class="row section8-article">
+                <div class="s8-art">
+                    <img src="img/siepdc/marvel-logo-brick-03-ps5-18jun20.jpg" alt="">
+                    <div class="section8-p">
+                        <div class="left">
+                            <p>平台:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;PS4, PS5</p>
+                            <p>推出日:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;12/11/2020</p>
+                            <p>發行商:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Worldwide Studios</p>
+                            <p>類型:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;動作</p>
+                            <p>語音:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;英文</p>
+                            <p>畫面語言:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;簡體中文, 繁體中文, 英文, 韓文</p>
+                        </div>
+                        <div class="right">
+                            <p>若要在PS5上遊玩這款遊戲，您的主機可能必須安裝最新的系<br>統軟件。雖然這款遊戲可以在PS5上遊玩，但是可能會缺少某<br>些在PS4上可以使用的機能。詳情請參閱<br>PlayStation.com/bc。
+                            </p>
+                            <p>購買或使用本內容需遵守SEN使用條款及用戶合約。</p>
+                        </div>
+                    </div>
+                    <div class="section8-bot">
+                        <p>© 2021 MARVEL © 2020 Sony Interactive Entertainment LLC. Created and developed by Insomniac
+                            Games, Inc.</p>
+                        <p>*需備妥相容的電視或顯示器才能使用4K及HDR功能。
+                        </p>
+                        <p>Worldwide Studios Privacy Policy & EULA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="left-top">
+                <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-base/resources/ps-bug.svg"
+                    alt="">
+                <div class="spanfa-rotate-1802">
+                    <i class="fas fa-globe"></i>
+                    <span>國家/地區: Taiwan</span>
+                </div>
+                <div class="span">
+                    <span>About Sony</span>
+                </div>
+            </div>
+            <div class="footer-left-b">
+                <div class="footer-svg">
+                    <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-base/resources/sie.svg"
+                        alt="Sony Interactive Entertainment">
+                </div>
+                <div class="span3">
+                    <span>©2022 Sony Interactive Entertainment Inc. All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-ul">
+                <ul>
+                    <li>支援</li>
+                    <li>隱私權政策</li>
+                    <li>條款及細則</li>
+                    <li>PlayStation Studios</li>
+                    <li>法律文件及聲明</li>
+                    <li>關於SIE</li>
+                    <li>PlayStation與環境保護</li>
+                </ul>
+            </div>
+            <div class="footer-ul">
+                <ul>
+                    <li>使用條款及用戶合約</li>
+                    <li>PlayStation Store退款政策</li>
+                    <li>健康警告</li>
+                    <li>關於分級及視聽年齡限制</li>
+                    <li>PlayStation careers</li>
+                    <li>知識產權資訊</li>
+                    <li>Publisher&Developer Relations</li>
+                    <li>網站地圖</li>
+                </ul>
+            </div>
+            <div class="footer-ul">
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                    <li>LINE</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- mobile footer -->
+    <footer class="mb-footer">
+        <div class="left-top">
+            <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-base/resources/ps-bug.svg"
+                alt="">
+            <div class="spanfa-rotate-1802">
+                <i class="fas fa-globe"></i>
+                <span>國家/地區: Taiwan</span>
+            </div>
+            <div class="span">
+                <span>About Sony</span>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-ul">
+                <ul>
+                    <li>支援</li>
+                    <li>隱私權政策</li>
+                    <li>條款及細則</li>
+                    <li>PlayStation Studios</li>
+                    <li>法律文件及聲明</li>
+                    <li>關於SIE</li>
+                    <li>PlayStation與環境保護</li>
+                </ul>
+            </div>
+            <div class="footer-ul">
+                <ul>
+                    <li>使用條款及用戶合約</li>
+                    <li>PlayStation Store退款政策</li>
+                    <li>健康警告</li>
+                    <li>關於分級及視聽年齡限制</li>
+                    <li>PlayStation careers</li>
+                    <li>知識產權資訊</li>
+                    <li>Publisher&Developer Relations</li>
+                    <li>網站地圖</li>
+                </ul>
+            </div>
+            <div class="footer-ul">
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                    <li>LINE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-left-b">
+            <div class="footer-svg">
+                <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-base/resources/sie.svg"
+                    alt="Sony Interactive Entertainment">
+            </div>
+            <div class="span3">
+                <span>©2022 Sony Interactive Entertainment Inc. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
